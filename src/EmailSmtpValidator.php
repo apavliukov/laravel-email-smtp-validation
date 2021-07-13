@@ -23,4 +23,9 @@ class EmailSmtpValidator
     {
         return $this->validator->validate($emails, $sender);
     }
+
+    public function isDisabledInEnv(): bool
+    {
+    	return in_array(config('app.env'), config('email-smtp-validation.disable_on_env'), true);
+    }
 }

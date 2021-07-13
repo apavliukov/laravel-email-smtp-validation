@@ -2,13 +2,21 @@
 
 namespace AlexPavliukov\EmailSmtpValidation\Providers;
 
-use AlexPavliukov\EmailSmtpValidation\Facades\EmailSmtpValidator;
 use Illuminate\Support\ServiceProvider;
 
 class EmailSmtpValidationServiceProvider extends ServiceProvider
 {
+	public function boot()
+	{
+		$this->publishes([
+			__DIR__ . '/../../config/email-smtp-validation.php' => config_path('email-smtp-validation.php')
+		], 'email-smtp-validation-config');
+
+		$this->mergeConfigFrom(__DIR__ . '/../../config/email-smtp-validation.php', 'email-smtp-validation');
+	}
+
 	/**
-	 * Register any application services.
+	 * Register any package services.
 	 *
 	 * @return void
 	 */
