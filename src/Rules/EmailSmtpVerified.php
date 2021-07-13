@@ -35,8 +35,7 @@ class EmailSmtpVerified implements Rule
 		$passes = false;
 
 		try {
-			$validationResult = $this->validator->validate($value);
-			$passes = $validationResult[$value];
+			$passes = $this->validator->validate($value);
 		} catch (\Exception $exception) {
 		}
 

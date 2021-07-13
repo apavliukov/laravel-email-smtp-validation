@@ -27,6 +27,11 @@
             "AlexPavliukov\\EmailSmtpValidation\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
@@ -36,5 +41,16 @@
                 "EmailSmtpValidator": "AlexPavliukov\\EmailSmtpValidation\\Facades\\EmailSmtpValidator"
             }
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "orchestra/testbench": "^6.19",
+        "mockery/mockery": "^1.4",
+        "fakerphp/faker": "^1.15"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php ./vendor/bin/testbench package:discover --ansi"
+        ]
     }
 }
