@@ -2,6 +2,12 @@
 
 Laravel package for simpler usage of [zytzagoo/smtp-validate-email](https://github.com/zytzagoo/smtp-validate-email) package to check if email really exists. It retrieves MX records for the email domain and then connects to the domain's SMTP server to try figuring out if the address really exists.
 
+## Installation
+
+```bash
+composer require apavliukov/laravel-email-smtp-validation
+```
+
 ## Usage
 
 ### Config
