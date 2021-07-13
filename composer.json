@@ -1,0 +1,39 @@
+{
+    "name": "apavliukov/laravel-email-smtp-validation",
+    "type": "library",
+    "description": "Validate email address via SMTP to check if it really exists",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexander Pavliukov",
+            "email": "alexander@iki-art.ru",
+            "role": "Developer"
+        }
+    ],
+    "keywords": [
+        "laravel",
+        "email",
+        "validation",
+        "smtp"
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "zytzagoo/smtp-validate-email": "^1.0",
+        "illuminate/support": "^8.50"
+    },
+    "autoload": {
+        "psr-4": {
+            "AlexPavliukov\\EmailSmtpValidation\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AlexPavliukov\\EmailSmtpValidation\\Providers\\EmailSmtpValidationServiceProvider"
+            ],
+            "aliases": {
+                "EmailSmtpValidator": "AlexPavliukov\\EmailSmtpValidation\\Facades\\EmailSmtpValidator"
+            }
+        }
+    }
+}
