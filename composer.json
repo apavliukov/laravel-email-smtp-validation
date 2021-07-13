@@ -1,6 +1,6 @@
 {
     "name": "apavliukov/laravel-email-smtp-validation",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "type": "library",
     "description": "Validate email address via SMTP to check if it really exists",
     "license": "MIT",
