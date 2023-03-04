@@ -20,7 +20,13 @@
     "require": {
         "php": "^7.4|^8.0",
         "zytzagoo/smtp-validate-email": "^1.0",
-        "illuminate/support": "^8.0|^9.0"
+        "illuminate/support": "^8.0|^9.0|^10.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "orchestra/testbench": "^6.19",
+        "mockery/mockery": "^1.4",
+        "fakerphp/faker": "^1.15"
     },
     "autoload": {
         "psr-4": {
@@ -41,12 +47,6 @@
                 "EmailSmtpValidator": "AlexPavliukov\\EmailSmtpValidation\\Facades\\EmailSmtpValidator"
             }
         }
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^9.5",
-        "orchestra/testbench": "^6.19",
-        "mockery/mockery": "^1.4",
-        "fakerphp/faker": "^1.15"
     },
     "scripts": {
         "post-autoload-dump": [
